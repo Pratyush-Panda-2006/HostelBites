@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HostelBites — Midnight Food Waste Arbitrage Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fixed Technical Grid Layer -->
+  <div class="fixed-grid-backdrop">
+    <div class="grid-line line-25"></div>
+    <div class="grid-line line-50"></div>
+    <div class="grid-line line-75"></div>
+    <div class="radial-grid-pattern"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="editorial-nav" id="main-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-bar bar-left"></span>
+        <span class="brand-logo">HOSTELBITES</span>
+        <span class="brand-bar bar-right"></span>
+      </div>
+      <nav class="nav-links">
+        <a href="#audit" class="nav-link">01 // AUDIT ENGINE</a>
+        <a href="#manifesto" class="nav-link">02 // ARCHITECTURE</a>
+        <a href="#dispatch" class="nav-link">03 // WHATSAPP DISPATCH</a>
+        <a href="#audio-feed" class="nav-link">04 // KITCHEN AUDIO</a>
+      </nav>
+      <div class="nav-status">
+        <span class="pulse-dot"></span>
+        <span class="status-mono">TABPFN READY</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span class="mono-badge">[ 20:00 KITCHEN CHECK-IN // NIGHT INVENTORY ARBITRAGE ]</span>
+      </div>
+      <h1 class="hero-title">
+        MIDNIGHT <span class="italic-accent">SURPLUS</span> LIQUIDATION
+      </h1>
+      <p class="hero-subtitle">
+        Zero-shot tabular spoilage forecasting for late-night campus food joints. Transform expiring chicken, paneer, and bun inventory into viral flash combos before 3:00 AM curfews.
+      </p>
+      <div class="hero-actions">
+        <a href="#audit" class="btn-primary">
+          <span class="btn-overlay"></span>
+          <span class="btn-text">INITIALIZE 8 PM AUDIT</span>
+        </a>
+        <a href="#manifesto" class="btn-secondary">
+          <span class="btn-text">VIEW SPECIFICATION &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Statistics Grid -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-icon-box">01</div>
+          <div class="stat-number">150+</div>
+          <div class="stat-label">NIGHT TRAINING RUNS</div>
+          <p class="stat-desc">Fitted directly into TabPFN's prior space without gradient descent iterations.</p>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon-box">02</div>
+          <div class="stat-number">&lt; 1.2s</div>
+          <div class="stat-label">DIAGNOSTIC INFERENCE</div>
+          <p class="stat-desc">Instant tabular loss classification coupled with Gemma 2 promo synthesis.</p>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-icon-box">03</div>
+          <div class="stat-number">91.4%</div>
+          <div class="stat-label">INVENTORY RECOVERY</div>
+          <p class="stat-desc">Eliminating perishable margin losses across university hostel hubs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Word Reveal Section -->
+    <section class="reveal-section" id="manifesto">
+      <div class="section-label-bar">
+        <span class="mono-section-tag">02 // THE ANTI-SPOILAGE THESIS</span>
+        <span class="mono-meta">AUTONOMOUS DISPATCH</span>
+      </div>
+      <div class="reveal-content">
+        <p class="reveal-paragraph" id="reveal-text">
+          Campus stalls operate on knife-edge margins. When midnight weather shifts or exam schedules alter dorm footsteps, marinated chicken and paneer become total write-offs by dawn. Open-weight inference empowers the neighborhood line cook with institutional-grade yield optimization, generating localized promotions and audio directions with zero vendor toll booths.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Audit Workflow & Scan Engine -->
+    <section class="audit-section" id="audit">
+      <div class="section-label-bar">
+        <span class="mono-section-tag">01 // REVENUE RECOVERY ENGINE</span>
+        <span class="mono-meta">INVENTORY &bull; WEATHER &bull; CAMPUS CALENDAR</span>
+      </div>
+
+      <div class="audit-grid">
+        <!-- Input Form -->
+        <div class="audit-form-col">
+          <div class="step-header">
+            <span class="step-num">01.1</span>
+            <h2 class="step-title">Enter 8:00 PM Stock & Shifts</h2>
+          </div>
+
+          <form id="audit-form" class="editorial-form">
+            <div class="form-row">
+              <div class="form-group flex-2">
+                <label class="mono-label">STALL / KITCHEN DESIGNATION</label>
+                <input type="text" id="stall-name" value="Khandagiri Night Roll Corner" class="clean-input" required>
+              </div>
+              <div class="form-group flex-1">
+                <label class="mono-label">CAMPUS HUB</label>
+                <select id="campus-hub" class="clean-input">
+                  <option value="SOA / ITER, Jagamara">SOA / ITER, Jagamara</option>
+                  <option value="KIIT Campus 6, Patia">KIIT Campus 6, Patia</option>
+                  <option value="OUTR / CET, Ghatikia">OUTR / CET, Ghatikia</option>
+                  <option value="Silicon Tech Hub">Silicon Tech Hub</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row three-col">
+              <div class="form-group">
+                <label class="mono-label">CHICKEN SURPLUS (KG)</label>
+                <input type="number" id="chicken-kg" step="0.1" value="3.5" class="clean-input" required>
+              </div>
+              <div class="form-group">
+                <label class="mono-label">PANEER SURPLUS (KG)</label>
+                <input type="number" id="paneer-kg" step="0.1" value="1.5" class="clean-input" required>
+              </div>
+              <div class="form-group">
+                <label class="mono-label">BREAD / BUNS (UNITS)</label>
+                <input type="number" id="bread-units" step="1" value="30" class="clean-input" required>
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="form-group">
+                <label class="mono-label">CAMPUS STATUS</label>
+                <div class="toggle-group">
+                  <label class="toggle-pill">
+                    <input type="radio" name="exam-toggle" value="1" checked>
+                    <span>EXAM WEEK ACTIVE</span>
+                  </label>
+                  <label class="toggle-pill">
+                    <input type="radio" name="exam-toggle" value="0">
+                    <span>REGULAR WEEK</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="mono-label">PRECIPITATION / WEATHER</label>
+                <div class="toggle-group">
+                  <label class="toggle-pill">
+                    <input type="radio" name="rain-toggle" value="0" checked>
+                    <span>CLEAR SKIES</span>
+                  </label>
+                  <label class="toggle-pill">
+                    <input type="radio" name="rain-toggle" value="1">
+                    <span>RAIN / MONSOON</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary full-width" id="submit-btn">
+              <span class="btn-overlay"></span>
+              <span class="btn-text" id="btn-label">EXECUTE TABPFN AUDIT & FLASH DEALS</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Technical Telemetry & Scan Output -->
+        <div class="audit-telemetry-col">
+          <div class="telemetry-card">
+            <div class="telemetry-header">
+              <span class="mono-label">AGENT DIAGNOSTIC STATE</span>
+              <span class="telemetry-tag" id="agent-state-badge">STANDBY</span>
+            </div>
+
+            <!-- Scan-Line Progress Bar -->
+            <div class="scanline-container" id="scan-container">
+              <div class="scanline-bar" id="scan-bar"></div>
+            </div>
+
+            <!-- Default / Standby Notice -->
+            <div class="telemetry-body" id="telemetry-standby">
+              <div class="ghost-code-frame">
+                <p class="mono-console">// Awaiting 20:00 inventory ingestion...</p>
+                <p class="mono-console">// TabPFN prior: 150 historical observations</p>
+                <p class="mono-console">// Yield recovery ready.</p>
+              </div>
+            </div>
+
+            <!-- Dynamic Diagnostic Panel (Filled on Submit) -->
+            <div class="telemetry-body hidden" id="telemetry-active">
+              <div class="metric-row">
+                <div class="metric-block">
+                  <span class="mono-label">PREDICTED RISK</span>
+                  <div class="metric-value-box">
+                    <span class="risk-pill" id="risk-pill">MODERATE</span>
+                  </div>
+                </div>
+                <div class="metric-block">
+                  <span class="mono-label">VALUE AT RISK</span>
+                  <div class="metric-value-box">
+                    <span class="serif-metric" id="loss-metric">₹0</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="diagnostic-divider"></div>
+
+              <div class="telemetry-details">
+                <div class="detail-line">
+                  <span class="mono-label">RECOMMENDED MARKDOWN:</span>
+                  <span class="mono-data" id="markdown-data">25% FLASH REDUCTION</span>
+                </div>
+                <div class="detail-line">
+                  <span class="mono-label">TARGET LIQUIDATION SPEED:</span>
+                  <span class="mono-data" id="window-data">CLEAR BEFORE 1:30 AM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section: Combos, WhatsApp & Voice Engine -->
+    <section class="results-section hidden" id="dispatch">
+      <div class="section-label-bar">
+        <span class="mono-section-tag">03 // SYNTHESIZED COMBOS & WHATSAPP DISPATCH</span>
+        <span class="mono-meta">POWERED BY GEMMA 2 (GROQ)</span>
+      </div>
+
+      <div class="dispatch-grid">
+        <!-- Synthesized Combos Column -->
+        <div class="combos-col">
+          <span class="mono-label">SYNTHESIZED MIDNIGHT FLASH PACKS</span>
+          <div class="combos-container" id="combos-wrapper">
+            <!-- Dynamic Combo Cards Inserted via JS -->
+          </div>
+        </div>
+
+        <!-- WhatsApp Broadcast Column -->
+        <div class="broadcast-col">
+          <div class="broadcast-header">
+            <span class="mono-label">READY-TO-POST WHATSAPP PROMO</span>
+            <button class="btn-micro" id="copy-btn">
+              <span class="btn-text">COPY BROADCAST</span>
+            </button>
+          </div>
+          <div class="broadcast-card">
+            <pre class="broadcast-text" id="whatsapp-text">// Waiting for generation...</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- ElevenLabs Audio Feed Section -->
+      <div class="audio-feed-container" id="audio-feed">
+        <div class="section-label-bar interior">
+          <span class="mono-section-tag">04 // KITCHEN AUDIO DISPATCH</span>
+          <span class="mono-meta">ELEVENLABS NEURAL TURBO</span>
+        </div>
+
+        <div class="audio-panel">
+          <div class="audio-meta">
+            <div class="soundwave-icon">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div>
+              <div class="audio-title">Hinglish Cook Walkthrough & Prep Order</div>
+              <div class="mono-data" id="audio-script-preview">Ready to generate line instructions...</div>
+            </div>
+          </div>
+
+          <div class="audio-controls">
+            <button class="btn-primary" id="play-audio-btn">
+              <span class="btn-overlay"></span>
+              <span class="btn-text" id="play-btn-label">STREAM KITCHEN AUDIO</span>
+            </button>
+            <audio id="audio-player" class="hidden"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="editorial-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-logo">HOSTELBITES</span>
+        <p class="footer-tagline">Autonomous food waste arbitrage for the late-night college economy.</p>
+      </div>
+      <div class="footer-meta">
+        <div class="mono-data">STACK: FASTAPI &bull; TABPFN &bull; GEMMA 2 &bull; ELEVENLABS</div>
+        <div class="mono-data">HOSTING: RENDER CLOUD (SG) + VERCEL EDGE</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
