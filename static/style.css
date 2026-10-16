@@ -673,6 +673,64 @@ body {
 .risk-pill.moderate { background: #fef9c3; color: #854d0e; }
 .risk-pill.safe { background: #dcfce7; color: #166534; }
 
+/* TabPFN Posterior Probabilities & Anomaly Detection */
+.anomaly-warning {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #991b1b;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 2px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prob-distribution-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0 18px;
+  background-color: #faf9f6;
+  border: 1px solid var(--border-color);
+  padding: 14px 16px;
+  border-radius: 2px;
+}
+
+.prob-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prob-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prob-track {
+  height: 4px;
+  background-color: var(--border-color);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.prob-fill {
+  height: 100%;
+  transition: width 0.8s var(--ease-editorial);
+}
+
+.prob-fill.safe { background-color: #22c55e; }
+.prob-fill.moderate { background-color: #f59e0b; }
+.prob-fill.high { background-color: #ea580c; }
+.prob-fill.critical { background-color: #dc2626; }
+
 .diagnostic-divider {
   height: 1px;
   background-color: var(--border-color);

@@ -124,7 +124,8 @@ function renderResults(data) {
   if (standby) standby.classList.add("hidden");
   if (active) active.classList.remove("hidden");
 
-  const risk = (data.risk_analysis && data.risk_analysis.risk_level) || "Moderate";
+  const riskAnalysis = data.risk_analysis || {};
+  const risk = riskAnalysis.risk_level || "Moderate";
   const pill = document.getElementById("risk-pill");
   if (pill) {
     pill.innerText = risk;
@@ -133,17 +134,55 @@ function renderResults(data) {
 
   const lossMetric = document.getElementById("loss-metric");
   if (lossMetric) {
-    lossMetric.innerText = `₹${data.risk_analysis.dead_stock_value_inr}`;
+    lossMetric.innerText = `₹${riskAnalysis.dead_stock_value_inr}`;
   }
 
   const markdownData = document.getElementById("markdown-data");
   if (markdownData) {
-    markdownData.innerText = `${data.risk_analysis.recommended_markdown_pct}% FLASH REDUCTION`;
+    markdownData.innerText = `${riskAnalysis.recommended_markdown_pct}% FLASH REDUCTION`;
+  }
+
+  const clearanceHoursMetric = document.getElementById("clearance-hours-metric");
+  if (clearanceHoursMetric) {
+    clearanceHoursMetric.innerText = `${riskAnalysis.clearance_window_hours || 2.5} HOURS`;
   }
 
   const windowData = document.getElementById("window-data");
   if (windowData) {
-    windowData.innerText = data.risk_analysis.clearance_window;
+    windowData.innerText = riskAnalysis.clearance_target_text || riskAnalysis.clearance_window || "CLEAR BEFORE 1:30 AM";
+  }
+
+  // Anomaly Badge
+  const anomalyBadge = document.getElementById("anomaly-badge");
+  if (anomalyBadge) {
+    if (riskAnalysis.anomaly_flag) {
+      anomalyBadge.classList.remove("hidden");
+    } else {
+      anomalyBadge.classList.add("hidden");
+    }
+  }
+
+  // Confidence Score
+  const confidenceMetric = document.getElementById("confidence-metric");
+  if (confidenceMetric) {
+    confidenceMetric.innerText = `${riskAnalysis.confidence_score || 85}%`;
+  }
+
+  // Render TabPFN probability distribution
+  const probs = riskAnalysis.class_probabilities || { "Safe": 0.1, "Moderate": 0.6, "High": 0.25, "Critical": 0.05 };
+  const probContainer = document.getElementById("tabpfn-probs");
+  if (probContainer) {
+    probContainer.innerHTML = Object.entries(probs).map(([cls, val]) => `
+      <div class="prob-row">
+        <div class="prob-label-row">
+          <span class="mono-label" style="font-size: 9px; margin: 0;">${cls.toUpperCase()}</span>
+          <span class="mono-data" style="font-size: 9px;">${(val * 100).toFixed(0)}%</span>
+        </div>
+        <div class="prob-track">
+          <div class="prob-fill ${cls.toLowerCase()}" style="width: ${Math.max(4, val * 100)}%;"></div>
+        </div>
+      </div>
+    `).join("");
   }
 }
 

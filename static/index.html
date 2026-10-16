@@ -207,6 +207,13 @@
 
             <!-- Dynamic Diagnostic Panel -->
             <div class="telemetry-body hidden" id="telemetry-active">
+              
+              <!-- Anomaly / Outlier Alert Banner -->
+              <div id="anomaly-badge" class="anomaly-warning hidden">
+                <span>⚠️ [TABULAR OUTLIER DETECTED]</span>
+                <span style="font-weight: 400;">Unusual surplus volume mismatch against campus footfall prior.</span>
+              </div>
+
               <div class="metric-row">
                 <div class="metric-block">
                   <span class="mono-label">PREDICTED RISK</span>
@@ -222,12 +229,29 @@
                 </div>
               </div>
 
+              <!-- TabPFN Posterior Probabilities Distribution -->
+              <div class="prob-distribution-container">
+                <div class="prob-label-row" style="margin-bottom: 6px;">
+                  <span class="mono-label" style="margin: 0;">TABPFN POSTERIOR DENSITY</span>
+                  <span class="mono-data" style="font-weight: 700; color: var(--accent-color);">
+                    CONFIDENCE: <span id="confidence-metric">0%</span>
+                  </span>
+                </div>
+                <div id="tabpfn-probs">
+                  <!-- Rendered dynamically via JavaScript -->
+                </div>
+              </div>
+
               <div class="diagnostic-divider"></div>
 
               <div class="telemetry-details">
                 <div class="detail-line">
                   <span class="mono-label">RECOMMENDED MARKDOWN:</span>
                   <span class="mono-data" id="markdown-data">25% FLASH REDUCTION</span>
+                </div>
+                <div class="detail-line">
+                  <span class="mono-label">CLEARANCE HALF-LIFE:</span>
+                  <span class="mono-data" id="clearance-hours-metric" style="font-weight: 700; color: var(--accent-color);">2.5 HOURS</span>
                 </div>
                 <div class="detail-line">
                   <span class="mono-label">TARGET LIQUIDATION SPEED:</span>
