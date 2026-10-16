@@ -1,6 +1,17 @@
+# Environment & Local Secrets
 .env
-__pycache__/
-*.pyc
-.git/
+.env.*
 .venv/
+venv/
+__pycache__/
+*.py[cod]
+.git/
 .pytest_cache/
+
+# Backend & Large AI Libraries (Deployed separately to Render)
+# Ignoring these tells Vercel NOT to bundle heavy PyTorch/TabPFN into a 500MB Lambda function
+requirements.txt
+main.py
+services/
+routers/
+data/

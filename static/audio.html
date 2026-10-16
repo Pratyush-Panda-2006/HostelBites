@@ -289,6 +289,10 @@
       document.getElementById('visualizerOverlay').classList.remove('hidden');
     }
 
+    const API_BASE_URL = window.location.origin.includes("localhost") || window.location.origin.includes("127.0.0.1")
+      ? "" 
+      : "https://hostelbites.onrender.com";
+
     // Audio stream button
     const streamBtn = document.getElementById('btnStreamAudio');
     const streamText = document.getElementById('streamBtnText');
@@ -310,7 +314,7 @@
       statusText.innerText = 'Status: Connecting to ElevenLabs Turbo...';
 
       try {
-        const res = await fetch('/api/speak', {
+        const res = await fetch(`${API_BASE_URL}/api/speak`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ script: scripts[activeLang] })
