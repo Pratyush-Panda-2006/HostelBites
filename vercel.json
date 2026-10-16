@@ -1,27 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "static/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "main.py"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/static/$1"
-    }
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "outputDirectory": "static",
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/audit", "destination": "/index.html" },
+    { "source": "/architecture", "destination": "/architecture.html" },
+    { "source": "/dispatch", "destination": "/dispatch.html" },
+    { "source": "/audio", "destination": "/audio.html" }
   ]
 }

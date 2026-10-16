@@ -1,13 +1,13 @@
 """HostelBites: Midnight Food Arbitrage Engine - FastAPI Application Entrypoint."""
 
 import os
+import sys
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from dotenv import load_dotenv
-
-import sys
 
 # Ensure UTF-8 output encoding across Windows consoles
 if hasattr(sys.stdout, "reconfigure"):
@@ -38,7 +38,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="HostelBites: Midnight Food Arbitrage Engine",
     description="Dynamic leftover clearance and viral promo engine for late-night campus food joints.",
-    version="1.0.0",
+    version="2.0.0",
     lifespan=lifespan,
 )
 
@@ -54,11 +54,35 @@ app.add_middleware(
 # Mount API routes
 app.include_router(arbitrage_router)
 
-# Mount static files at root
+# Path to static assets
 static_dir = os.path.join(os.path.dirname(__file__), "static")
 if not os.path.exists(static_dir):
     os.makedirs(static_dir, exist_ok=True)
 
+
+# Clean multi-page routes
+@app.get("/", response_class=FileResponse)
+@app.get("/audit", response_class=FileResponse)
+async def serve_index():
+    return FileResponse(os.path.join(static_dir, "index.html"))
+
+
+@app.get("/architecture", response_class=FileResponse)
+async def serve_architecture():
+    return FileResponse(os.path.join(static_dir, "architecture.html"))
+
+
+@app.get("/dispatch", response_class=FileResponse)
+async def serve_dispatch():
+    return FileResponse(os.path.join(static_dir, "dispatch.html"))
+
+
+@app.get("/audio", response_class=FileResponse)
+async def serve_audio():
+    return FileResponse(os.path.join(static_dir, "audio.html"))
+
+
+# Mount static directory for CSS, JS, fonts, etc.
 app.mount("/", StaticFiles(directory=static_dir, html=True), name="static")
 
 if __name__ == "__main__":

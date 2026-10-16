@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Dispatch Lab — HostelBites Flash Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fixed Technical Grid Layer -->
+  <div class="fixed-grid-backdrop">
+    <div class="grid-line line-25"></div>
+    <div class="grid-line line-50"></div>
+    <div class="grid-line line-75"></div>
+    <div class="radial-grid-pattern"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="editorial-nav" id="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">
+        <span class="brand-bar bar-left"></span>
+        <span class="brand-logo">HOSTELBITES</span>
+        <span class="brand-bar bar-right"></span>
+      </a>
+      <nav class="nav-links">
+        <a href="/" class="nav-link">01 // AUDIT ENGINE</a>
+        <a href="/architecture" class="nav-link">02 // ARCHITECTURE</a>
+        <a href="/dispatch" class="nav-link">03 // WHATSAPP DISPATCH</a>
+        <a href="/audio" class="nav-link">04 // KITCHEN AUDIO</a>
+      </nav>
+      <div class="nav-status">
+        <span class="pulse-dot"></span>
+        <span class="status-mono">TABPFN-3.5 INFERENCE READY</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span class="mono-badge">[ 03 // VIRAL DISPATCH & TEMPLATE REASONING ENGINE ]</span>
+      </div>
+      <h1 class="hero-title">
+        WHATSAPP <span class="italic-accent">DISPATCH</span> LAB
+      </h1>
+      <p class="hero-subtitle">
+        Curate high-yield midnight surplus bundles, simulate live dorm group reception, and broadcast high-urgency markdown broadcasts with 1-click clipboard synthesis.
+      </p>
+    </section>
+
+    <!-- Dispatch Laboratory -->
+    <section class="audit-section" id="dispatch-lab">
+      <div class="section-label-bar">
+        <span class="mono-section-tag">03.1 // PROMOTION COMPOSER & RECEPTION SIMULATOR</span>
+        <span class="mono-meta">POWERED BY GEMMA 2 REASONING</span>
+      </div>
+
+      <div class="dispatch-lab-grid">
+        <!-- Left: Interactive Combo Builders & Target Audience -->
+        <div class="composer-col">
+          <!-- Target Audience Selector -->
+          <div class="audience-selector-row">
+            <span class="mono-label">SELECT TARGET AUDIENCE SEGMENT</span>
+            <div class="audience-pills">
+              <button type="button" class="btn-audience-pill selected" data-audience="exam">
+                📚 EXAM NIGHT CRAMMERS
+              </button>
+              <button type="button" class="btn-audience-pill" data-audience="match">
+                🏏 MATCH SCREENING HOSTELLERS
+              </button>
+              <button type="button" class="btn-audience-pill" data-audience="weekend">
+                🎮 LATE-NIGHT GAMERS & SURVIVORS
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Flash Combos -->
+          <div class="combos-section-header">
+            <span class="mono-label">SYNTHESIZED MIDNIGHT FLASH COMBOS</span>
+          </div>
+
+          <div class="combos-container" id="combosList">
+            <!-- Dynamic Combo Cards -->
+            <div class="combo-card">
+              <div class="combo-header">
+                <span class="combo-name" id="combo1Name">End-Sem All-Nighter Double Roll Combo</span>
+                <span class="combo-savings" id="combo1Savings">SAVE ₹51 (36% OFF)</span>
+              </div>
+              <p class="combo-items" id="combo1Items">1x Double Egg Chicken Roll + 1x Thums Up (250ml chilled bottle)</p>
+              <div class="combo-pricing">
+                <span class="flash-price" id="combo1Price">₹89</span>
+                <span class="original-price" id="combo1Old">₹140</span>
+              </div>
+            </div>
+
+            <div class="combo-card">
+              <div class="combo-header">
+                <span class="combo-name" id="combo2Name">Midnight Paneer Burst Paratha Pack</span>
+                <span class="combo-savings" id="combo2Savings">SAVE ₹61 (38% OFF)</span>
+              </div>
+              <p class="combo-items" id="combo2Items">2x Butter Paneer Stuffed Parathas + Green Chutney & Pickled Onion</p>
+              <div class="combo-pricing">
+                <span class="flash-price" id="combo2Price">₹99</span>
+                <span class="original-price" id="combo2Old">₹160</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Navigation Actions -->
+          <div class="audit-navigation-actions" style="margin-top: 32px;">
+            <a href="/audio" class="btn-secondary">
+              <span class="btn-text">OPEN KITCHEN AUDIO &rarr;</span>
+            </a>
+            <a href="/" class="btn-micro">
+              <span>&larr; RECALIBRATE AUDIT</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Realistic Phone Bezel Frame with WhatsApp Preview -->
+        <div class="phone-preview-col">
+          <div class="broadcast-header">
+            <span class="mono-label">LIVE PHONE RECEPTION PREVIEW</span>
+            <button class="btn-primary" id="btnCopyBroadcast">
+              <span class="btn-overlay"></span>
+              <span class="btn-text" id="copyBtnText">COPY BROADCAST</span>
+            </button>
+          </div>
+
+          <!-- Smartphone Bezel Frame -->
+          <div class="phone-bezel">
+            <div class="phone-speaker-bar">
+              <span class="wa-status-pill">&bull; HOSTEL BIKERS & CRAMMERS (340)</span>
+              <span style="font-size: 11px; color: #8696a0;">1:15 AM</span>
+            </div>
+            
+            <div class="phone-screen">
+              <div class="wa-bubble" id="whatsappLiveBubble">
+                <!-- WhatsApp Text Stream -->
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; text-align: center;">
+            <a href="#" target="_blank" id="directWaLink" class="btn-secondary" style="font-size: 9px; padding: 10px 16px;">
+              <span>SHARE DIRECTLY TO WHATSAPP WEB &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="editorial-footer">
+    <div class="page-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-brand-title">HOSTELBITES</h3>
+          <p class="footer-tagline">
+            Zero-shot tabular inventory liquidation for the midnight college economy.
+          </p>
+          <div class="footer-clock-box">
+            <span class="clock-indicator"></span>
+            <span class="footer-clock-text" id="footer-clock-display">20:00 KITCHEN CHECK-IN ACTIVE</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">01 // OPEN MODELS STACK</h4>
+          <ul class="footer-list">
+            <li class="footer-item"><strong>Prior Labs TabPFN-3.5</strong> (CPU Prior)</li>
+            <li class="footer-item"><strong>Google Gemma 2 9B-IT</strong> (Groq LPU)</li>
+            <li class="footer-item"><strong>ElevenLabs Neural Turbo</strong> (Hinglish)</li>
+            <li class="footer-item"><strong>Render Cloud Container</strong> (SG-Sin1)</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">02 // CAMPUS HUB COVERAGE</h4>
+          <ul class="footer-list">
+            <li class="footer-item"><strong>SOA / ITER</strong> (Jagamara Gate)</li>
+            <li class="footer-item"><strong>KIIT Campus 6 & KIMS</strong> (Patia)</li>
+            <li class="footer-item"><strong>OUTR / CET</strong> (Ghatikia Campus)</li>
+            <li class="footer-item"><strong>Silicon University</strong> (Tech Hub)</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">03 // METADATA</h4>
+          <span class="footer-badge-tag">HF26 DEV CHALLENGE // WEEK 2: SIDE HUSTLE</span>
+          <p class="footer-license-note">
+            Commit SHA: <code>62198dd</code><br>
+            License: MIT Open Source<br>
+            Autonomous Yield Recovery
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 HOSTELBITES &bull; ALL RIGHTS RESERVED</span>
+        <span>ENGINEERED FOR MIDNIGHT CAMPUS RESILIENCE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    // Templates by audience segment
+    const templates = {
+      exam: (stall, combo1, combo2, price1, price2) => 
+`🚨 *MIDNIGHT EXAM HUNGER DROP // ${stall.toUpperCase()}* 🚨
+
+Burn the midnight oil, not your semester grades! Last kitchen stock clearance before 1:45 AM:
+
+🌯 *${combo1}* — ₹${price1} (Flat 35% OFF)
+🧀 *${combo2}* — ₹${price2} (Save ₹50)
+
+⏰ *DEAL CLOSES AT 1:45 AM SHARP*
+🛵 Free drop directly to Hostel Gates 1 to 5.
+📲 Ping your room no. & order immediately to lock stock! 🚀`,
+
+      match: (stall, combo1, combo2, price1, price2) => 
+`🏏 *LATE-NIGHT MATCH SCREENING FLASH SALE // ${stall.toUpperCase()}* 🏏
+
+Last overs tension? Feed the squad before the kitchen closes at 2:00 AM:
+
+🌯 *${combo1}* — ₹${price1} (Clearance Deal)
+🧀 *${combo2}* — ₹${price2} (Hostel Favorite)
+
+🔥 *LIMITED TO FIRST 25 ORDERS TONIGHT*
+📍 Pick-up at stall or gate drop. Ping now!`,
+
+      weekend: (stall, combo1, combo2, price1, price2) => 
+`🎮 *ALL-NIGHTER SURVIVOR PACK // ${stall.toUpperCase()}* 🎮
+
+Gaming past 2:00 AM? Canteen closed? We got you sorted with fresh batch-fried rolls:
+
+🌯 *${combo1}* — ₹${price1}
+🧀 *${combo2}* — ₹${price2}
+
+⚡ Valid till stock lasts tonight. First come, first served!`
+    };
+
+    let activeAudience = 'exam';
+    let currentStall = "KHANDAGIRI ROLL CORNER";
+    let combo1 = "End-Sem Double Chicken Roll + Thums Up";
+    let combo2 = "Midnight Paneer Burst Paratha Pack";
+    let price1 = 89;
+    let price2 = 99;
+
+    // Load any saved audit data from sessionStorage
+    const saved = window.HostelBitesState ? window.HostelBitesState.getLatestAudit() : null;
+    if (saved && saved.combos && saved.combos.length >= 2) {
+      combo1 = saved.combos[0].name;
+      price1 = saved.combos[0].flash_price;
+      combo2 = saved.combos[1].name;
+      price2 = saved.combos[1].flash_price;
+
+      document.getElementById('combo1Name').innerText = saved.combos[0].name;
+      document.getElementById('combo1Items').innerText = saved.combos[0].items;
+      document.getElementById('combo1Price').innerText = `₹${saved.combos[0].flash_price}`;
+      document.getElementById('combo1Savings').innerText = saved.combos[0].savings;
+
+      document.getElementById('combo2Name').innerText = saved.combos[1].name;
+      document.getElementById('combo2Items').innerText = saved.combos[1].items;
+      document.getElementById('combo2Price').innerText = `₹${saved.combos[1].flash_price}`;
+      document.getElementById('combo2Savings').innerText = saved.combos[1].savings;
+    }
+
+    function renderBroadcast() {
+      const text = templates[activeAudience](currentStall, combo1, combo2, price1, price2);
+      const bubble = document.getElementById('whatsappLiveBubble');
+      bubble.innerText = text;
+
+      // Update direct WhatsApp web link
+      const directLink = document.getElementById('directWaLink');
+      directLink.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    }
+
+    // Audience selection buttons
+    const audienceButtons = document.querySelectorAll('.btn-audience-pill');
+    audienceButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        audienceButtons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        activeAudience = btn.getAttribute('data-audience');
+        renderBroadcast();
+      });
+    });
+
+    // Copy button with character-tracking animation
+    const copyBtn = document.getElementById('btnCopyBroadcast');
+    const copyText = document.getElementById('copyBtnText');
+
+    copyBtn.addEventListener('click', async () => {
+      const text = document.getElementById('whatsappLiveBubble').innerText;
+      try {
+        await navigator.clipboard.writeText(text);
+        copyText.innerText = "COPIED TO CLIPBOARD!";
+        copyBtn.style.backgroundColor = "var(--fg-color)";
+        setTimeout(() => {
+          copyText.innerText = "COPY BROADCAST";
+          copyBtn.style.backgroundColor = "var(--accent-color)";
+        }, 2000);
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
+    });
+
+    renderBroadcast();
+  </script>
+</body>
+</html>

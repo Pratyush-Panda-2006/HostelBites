@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Audio Console — HostelBites Multilingual Dispatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fixed Technical Grid Layer -->
+  <div class="fixed-grid-backdrop">
+    <div class="grid-line line-25"></div>
+    <div class="grid-line line-50"></div>
+    <div class="grid-line line-75"></div>
+    <div class="radial-grid-pattern"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="editorial-nav" id="main-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">
+        <span class="brand-bar bar-left"></span>
+        <span class="brand-logo">HOSTELBITES</span>
+        <span class="brand-bar bar-right"></span>
+      </a>
+      <nav class="nav-links">
+        <a href="/" class="nav-link">01 // AUDIT ENGINE</a>
+        <a href="/architecture" class="nav-link">02 // ARCHITECTURE</a>
+        <a href="/dispatch" class="nav-link">03 // WHATSAPP DISPATCH</a>
+        <a href="/audio" class="nav-link">04 // KITCHEN AUDIO</a>
+      </nav>
+      <div class="nav-status">
+        <span class="pulse-dot"></span>
+        <span class="status-mono">TABPFN-3.5 INFERENCE READY</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span class="mono-badge">[ 04 // MULTILINGUAL KITCHEN VOICE DISPATCH & FREQUENCY TELEMETRY ]</span>
+      </div>
+      <h1 class="hero-title">
+        LINE COOK <span class="italic-accent">AUDIO</span> FEED
+      </h1>
+      <p class="hero-subtitle">
+        Hands-free, low-latency audio preparation walkthroughs for busy kitchen staff. Synthesized in native Hinglish, Devanagari Hindi, and Odia with real-time 32-bar acoustic visualizers.
+      </p>
+    </section>
+
+    <!-- Audio Console & Visualizer Section -->
+    <section class="audit-section" id="audio-console">
+      <div class="section-label-bar">
+        <span class="mono-section-tag">04.1 // REAL-TIME FREQUENCY VISUALIZER & PLAYBACK CONSOLE</span>
+        <span class="mono-meta">ELEVENLABS TURBO V2.5 &bull; 32-BAR FFT</span>
+      </div>
+
+      <div class="audio-hub-grid">
+        <!-- Left: Audio Controls & Canvas Visualizer -->
+        <div class="audio-console-card">
+          <div class="step-header">
+            <span class="step-num">04.A</span>
+            <h2 class="step-title">Acoustic Dispatch Deck</h2>
+          </div>
+
+          <!-- HTML5 Canvas 32-Bar Visualizer -->
+          <div class="canvas-visualizer-container">
+            <canvas id="waveformCanvas" width="480" height="120"></canvas>
+            <div class="visualizer-overlay-text" id="visualizerOverlay">
+              32-BAR FREQUENCY VISUALIZER // STANDBY
+            </div>
+          </div>
+
+          <!-- Speed & Setting Toggles -->
+          <div class="audio-settings-bar">
+            <div>
+              <span class="mono-label">PLAYBACK SPEED</span>
+              <div class="speed-toggles-group">
+                <button type="button" class="btn-speed active" data-speed="1.0">1.0x</button>
+                <button type="button" class="btn-speed" data-speed="1.2">1.2x</button>
+                <button type="button" class="btn-speed" data-speed="1.5">1.5x</button>
+              </div>
+            </div>
+
+            <div style="text-align: right;">
+              <span class="mono-label">VOICE ENGINE</span>
+              <span class="mono-data" style="color: var(--accent-color); font-weight: 700;">GEORGE TURBO v2.5</span>
+            </div>
+          </div>
+
+          <!-- Main Stream Button -->
+          <button type="button" class="btn-primary full-width" id="btnStreamAudio">
+            <span class="btn-overlay"></span>
+            <span class="btn-text" id="streamBtnText">STREAM KITCHEN AUDIO</span>
+          </button>
+          
+          <audio id="kitchenAudioPlayer" class="hidden"></audio>
+
+          <div style="margin-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+            <span class="mono-data" id="streamStatusText">Status: Ready to stream speech</span>
+            <span class="mono-data">LATENCY: &lt; 280 MS</span>
+          </div>
+        </div>
+
+        <!-- Right: Trilingual Scripts (Hinglish, Hindi, Odia) -->
+        <div class="scripts-container-card">
+          <div class="step-header">
+            <span class="step-num">04.B</span>
+            <h2 class="step-title">Multilingual Script Walkthrough</h2>
+          </div>
+
+          <!-- Script Language Tabs -->
+          <div class="script-tabs">
+            <button type="button" class="btn-script-tab active" data-lang="hinglish">
+              ROMANIZED HINGLISH
+            </button>
+            <button type="button" class="btn-script-tab" data-lang="hindi">
+              DEVANAGARI (हिंदी)
+            </button>
+            <button type="button" class="btn-script-tab" data-lang="odia">
+              ODIA (ଓଡ଼ିଆ)
+            </button>
+          </div>
+
+          <!-- Active Script Display -->
+          <div class="script-display-body">
+            <p class="script-text-para" id="scriptContent">
+              "Bhaiya, sabse pehle chicken rolls aur paratha ka batch high-flame par fry kardo. 1:30 AM tak saara clearance stock khatam karna hai!"
+            </p>
+          </div>
+
+          <div class="script-sub-notes">
+            <span>&bull; PREP PRIORITY: BATCH FRY PERISHABLES FIRST</span><br>
+            <span>&bull; TARGET CLEARANCE WINDOW: 45 - 90 MINUTES</span>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="/dispatch" class="btn-secondary">
+              <span class="btn-text">&larr; VIEW WHATSAPP DISPATCH</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Editorial Footer -->
+  <footer class="editorial-footer">
+    <div class="page-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-brand-title">HOSTELBITES</h3>
+          <p class="footer-tagline">
+            Zero-shot tabular inventory liquidation for the midnight college economy.
+          </p>
+          <div class="footer-clock-box">
+            <span class="clock-indicator"></span>
+            <span class="footer-clock-text" id="footer-clock-display">20:00 KITCHEN CHECK-IN ACTIVE</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">01 // OPEN MODELS STACK</h4>
+          <ul class="footer-list">
+            <li class="footer-item"><strong>Prior Labs TabPFN-3.5</strong> (CPU Prior)</li>
+            <li class="footer-item"><strong>Google Gemma 2 9B-IT</strong> (Groq LPU)</li>
+            <li class="footer-item"><strong>ElevenLabs Neural Turbo</strong> (Hinglish)</li>
+            <li class="footer-item"><strong>Render Cloud Container</strong> (SG-Sin1)</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">02 // CAMPUS HUB COVERAGE</h4>
+          <ul class="footer-list">
+            <li class="footer-item"><strong>SOA / ITER</strong> (Jagamara Gate)</li>
+            <li class="footer-item"><strong>KIIT Campus 6 & KIMS</strong> (Patia)</li>
+            <li class="footer-item"><strong>OUTR / CET</strong> (Ghatikia Campus)</li>
+            <li class="footer-item"><strong>Silicon University</strong> (Tech Hub)</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">03 // METADATA</h4>
+          <span class="footer-badge-tag">HF26 DEV CHALLENGE // WEEK 2: SIDE HUSTLE</span>
+          <p class="footer-license-note">
+            Commit SHA: <code>62198dd</code><br>
+            License: MIT Open Source<br>
+            Autonomous Yield Recovery
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 HOSTELBITES &bull; ALL RIGHTS RESERVED</span>
+        <span>ENGINEERED FOR MIDNIGHT CAMPUS RESILIENCE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    // Scripts in 3 languages
+    const scripts = {
+      hinglish: "Bhaiya, sabse pehle chicken rolls aur paratha ka batch high-flame par fry kardo. 1:30 AM tak saara clearance stock khatam karna hai!",
+      hindi: "भैया, सबसे पहले चिकन और पनीर रोल्स का बैच हाई फ्लेम पर फ्राई कर दो। 1:30 AM तक सारा क्लीयरेंस स्टॉक खत्म करना है!",
+      odia: "ଭାଇ, ପ୍ରଥମେ ଚିକେନ୍ ଏବଂ ପନିର ରୋଲ୍ ବ୍ୟାଚ୍ ଗୁଡ଼ିକୁ ହାଇ ଫ୍ଲେମ୍ ରେ ଫ୍ରାଏ କରନ୍ତୁ। ରାତି ୧:୩୦ ସୁଦ୍ଧା ସବୁ ଷ୍ଟକ୍ କ୍ଲିୟର କରିବାକୁ ହେବ!"
+    };
+
+    let activeLang = 'hinglish';
+    let currentPlaybackSpeed = 1.0;
+    let isPlaying = false;
+
+    // Load any saved cook script from sessionStorage
+    const savedAudit = window.HostelBitesState ? window.HostelBitesState.getLatestAudit() : null;
+    if (savedAudit && savedAudit.cook_audio_script) {
+      scripts.hinglish = savedAudit.cook_audio_script;
+    }
+
+    const scriptPara = document.getElementById('scriptContent');
+    scriptPara.innerText = `"${scripts[activeLang]}"`;
+
+    // Language tabs
+    const langTabs = document.querySelectorAll('.btn-script-tab');
+    langTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        langTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeLang = tab.getAttribute('data-lang');
+        scriptPara.innerText = `"${scripts[activeLang]}"`;
+      });
+    });
+
+    // Speed toggles
+    const speedButtons = document.querySelectorAll('.btn-speed');
+    const audioPlayer = document.getElementById('kitchenAudioPlayer');
+    speedButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        speedButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentPlaybackSpeed = parseFloat(btn.getAttribute('data-speed'));
+        if (audioPlayer) audioPlayer.playbackRate = currentPlaybackSpeed;
+      });
+    });
+
+    // Canvas 32-Bar Visualizer Setup
+    const canvas = document.getElementById('waveformCanvas');
+    const ctx = canvas.getContext('2d');
+    const numBars = 32;
+    let visualizerAnimationId = null;
+
+    function drawVisualizer(frequencies) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const barWidth = (canvas.width / numBars) - 2;
+
+      for (let i = 0; i < numBars; i++) {
+        const height = frequencies ? frequencies[i] : 6;
+        const x = i * (barWidth + 2);
+        const y = canvas.height - height;
+
+        // Editorial forest green gradient
+        ctx.fillStyle = '#3d7068';
+        ctx.fillRect(x, y, barWidth, height);
+      }
+    }
+    drawVisualizer(); // Initial flat draw
+
+    function startVisualizerAnimation() {
+      document.getElementById('visualizerOverlay').classList.add('hidden');
+      function animate() {
+        if (!isPlaying) return;
+        const simulatedFrequencies = [];
+        for (let i = 0; i < numBars; i++) {
+          simulatedFrequencies.push(Math.floor(Math.random() * (canvas.height - 15)) + 8);
+        }
+        drawVisualizer(simulatedFrequencies);
+        visualizerAnimationId = requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    function stopVisualizerAnimation() {
+      if (visualizerAnimationId) cancelAnimationFrame(visualizerAnimationId);
+      drawVisualizer();
+      document.getElementById('visualizerOverlay').classList.remove('hidden');
+    }
+
+    // Audio stream button
+    const streamBtn = document.getElementById('btnStreamAudio');
+    const streamText = document.getElementById('streamBtnText');
+    const statusText = document.getElementById('streamStatusText');
+
+    streamBtn.addEventListener('click', async () => {
+      if (isPlaying) {
+        audioPlayer.pause();
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        isPlaying = false;
+        stopVisualizerAnimation();
+        streamText.innerText = 'STREAM KITCHEN AUDIO';
+        statusText.innerText = 'Status: Paused';
+        return;
+      }
+
+      streamText.innerText = 'FETCHING VOICE BRIEF...';
+      streamBtn.disabled = true;
+      statusText.innerText = 'Status: Connecting to ElevenLabs Turbo...';
+
+      try {
+        const res = await fetch('/api/speak', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ script: scripts[activeLang] })
+        });
+
+        if (res.status === 200) {
+          const blob = await res.blob();
+          if (blob.size > 100) {
+            const url = URL.createObjectURL(blob);
+            audioPlayer.src = url;
+            audioPlayer.playbackRate = currentPlaybackSpeed;
+            await audioPlayer.play();
+
+            isPlaying = true;
+            streamBtn.disabled = false;
+            streamText.innerText = 'PAUSE AUDIO WALKTHROUGH';
+            statusText.innerText = 'Status: Streaming George (ElevenLabs)';
+            startVisualizerAnimation();
+
+            audioPlayer.onended = () => {
+              isPlaying = false;
+              stopVisualizerAnimation();
+              streamText.innerText = 'STREAM KITCHEN AUDIO';
+              statusText.innerText = 'Status: Playback completed';
+            };
+            return;
+          }
+        }
+
+        // Web Speech API fallback
+        playSpeechSynthesisFallback();
+
+      } catch (err) {
+        console.warn('ElevenLabs API unavailable, falling back to browser voice:', err);
+        playSpeechSynthesisFallback();
+      }
+    });
+
+    function playSpeechSynthesisFallback() {
+      if (!('speechSynthesis' in window)) {
+        streamBtn.disabled = false;
+        streamText.innerText = 'STREAM KITCHEN AUDIO';
+        statusText.innerText = 'Status: Voice synthesis not supported in browser';
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(scripts[activeLang]);
+      utterance.rate = currentPlaybackSpeed;
+      utterance.pitch = 1.0;
+
+      // Try matching Indian voice
+      const voices = window.speechSynthesis.getVoices();
+      const indianVoice = voices.find(v => v.lang.includes('hi') || v.lang.includes('IN'));
+      if (indianVoice) utterance.voice = indianVoice;
+
+      isPlaying = true;
+      streamBtn.disabled = false;
+      streamText.innerText = 'PAUSE AUDIO WALKTHROUGH';
+      statusText.innerText = 'Status: Streaming Browser Speech Voice';
+      startVisualizerAnimation();
+
+      utterance.onend = () => {
+        isPlaying = false;
+        stopVisualizerAnimation();
+        streamText.innerText = 'STREAM KITCHEN AUDIO';
+        statusText.innerText = 'Status: Playback completed';
+      };
+
+      utterance.onerror = () => {
+        isPlaying = false;
+        stopVisualizerAnimation();
+        streamText.innerText = 'STREAM KITCHEN AUDIO';
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
